@@ -1,8 +1,14 @@
 package com.zupschool.gerenciamentoescolar.DTO;
 
 import com.zupschool.gerenciamentoescolar.Model.Aluno;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class AlunoDTO {
+import java.io.Serializable;
+
+@NoArgsConstructor
+@Data
+public class AlunoDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private Long id;
