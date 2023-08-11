@@ -4,12 +4,12 @@ import com.zupschool.gerenciamentoescolar.DTO.AlunoDTO;
 import com.zupschool.gerenciamentoescolar.Model.Aluno;
 import com.zupschool.gerenciamentoescolar.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-
+import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -22,14 +22,43 @@ public class AlunoService {
         this.alunoRepository = alunoRepository;
     }
 
-    public ResponseEntity<ArrayList<AlunoDTO>> listaAlunos (){
+    public List<AlunoDTO> listaAlunos (){
         Iterable<Aluno> alunos = alunoRepository.findAll();
-        ArrayList<AlunoDTO> alunoDTO = new ArrayList<>();
+        List<AlunoDTO> alunoDTO = new ArrayList<>();
         for (Aluno aluno: alunos){
             alunoDTO.add(new AlunoDTO(aluno));
 
         }
 
-        return new ResponseEntity<>(alunoDTO,HttpStatus.OK);
+        return alunoDTO;
     }
+    public Optional<AlunoDTO> getAlunoPorId(Long id) {
+        Optional<Aluno> aluno = alunoRepository.findById(id);
+        if (aluno.isEmpty()) {
+
+            return Optional.empty();
+        }
+        return aluno.map(AlunoDTO::new);
+    }
+    public AlunoDTO cadastraAluno(AlunoDTO alunoDTO) {
+        Aluno aluno = alunoRepository.save(new Aluno(alunoDTO));
+        return new AlunoDTO(aluno);
+    }
+
+    public AlunoDTO atualizaAluno(AlunoDTO alunoDTO){
+       Aluno alunoAtual = alunoRepository.findById(alunoDTO.getId()).get();
+        if (alunoAtual.getId()!=null){
+            alunoAtual.setId(alunoDTO.getId());
+            alunoAtual.setNome(alunoDTO.getNome());
+            alunoAtual.setEmail(alunoDTO.getEmail());
+            alunoAtual.setIdade(alunoDTO.getIdade());
+        }
+        Aluno alunoSalvo = alunoRepository.save(alunoAtual);
+        return new AlunoDTO(alunoSalvo);
+    }
+    public void deletaAluno(Long id) {
+        alunoRepository.deleteById(id);
+    }
+
+
 }
