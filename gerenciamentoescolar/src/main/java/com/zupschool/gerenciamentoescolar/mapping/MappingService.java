@@ -35,4 +35,5 @@ public class MappingService {
     public Professor mapDTOToProfessor (ProfessorDTO professorDTO){
         return modelMapper.map(professorDTO,Professor.class);
     }
+
 }

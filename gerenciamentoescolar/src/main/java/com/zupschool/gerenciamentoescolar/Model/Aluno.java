@@ -1,10 +1,7 @@
 package com.zupschool.gerenciamentoescolar.Model;
 
 import com.zupschool.gerenciamentoescolar.DTO.AlunoDTO;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;
 
@@ -20,11 +17,8 @@ public class Aluno {
     private int idade;
     @Email
     private String email;
+    @ManyToOne
+    @JoinColumn(name="matricula.id")
+    private Matricula matricula;
 
-    public Aluno(AlunoDTO alunoDTO) {
-        this(alunoDTO.getId(),
-                alunoDTO.getNome(),
-                alunoDTO.getIdade(),
-                alunoDTO.getEmail());
-    }
 }

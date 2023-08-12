@@ -19,8 +19,9 @@ public class AlunoService {
     private final AlunoRepository alunoRepository;
     @Autowired
     private MappingService mappingService;
-    public AlunoService(AlunoRepository alunoRepository) {
+    public AlunoService(AlunoRepository alunoRepository, MappingService mappingService) {
         this.alunoRepository = alunoRepository;
+        this.mappingService = mappingService;
     }
 
     public List<AlunoDTO> listaAlunos (){

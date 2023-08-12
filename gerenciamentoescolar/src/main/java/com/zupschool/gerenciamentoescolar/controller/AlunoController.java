@@ -16,9 +16,6 @@ public class AlunoController {
     @Autowired
     AlunoService alunoService;
 
-    public AlunoController(AlunoService alunoService) {
-        this.alunoService = alunoService;
-    }
 
     @GetMapping
     public ResponseEntity<List<AlunoDTO>> listaAlunos(){

@@ -22,8 +22,9 @@ public class CursoService {
     @Autowired
     private MappingService mappingService;
 
-    public CursoService(CursoRepository cursoRepository) {
+    public CursoService(CursoRepository cursoRepository, MappingService mappingService) {
         this.cursoRepository = cursoRepository;
+        this.mappingService = mappingService;
     }
 
     public List<CursoDTO> listaCursos (){

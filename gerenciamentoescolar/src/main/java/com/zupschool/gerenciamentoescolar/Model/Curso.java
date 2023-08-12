@@ -21,6 +21,9 @@ public class Curso {
     @ManyToOne
     @JoinColumn(name="professor.id")
     private Professor professor;
+    @ManyToOne
+    @JoinColumn(name="matricula.id")
+    private Matricula matricula;
 
 
 }
