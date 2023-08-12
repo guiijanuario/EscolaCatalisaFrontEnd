@@ -15,11 +15,4 @@ public class AlunoDTO implements Serializable {
     private Integer idade;
     private String email;
 
-    public AlunoDTO(Aluno aluno) {
-        this.id = aluno.getId();
-        this.nome = aluno.getNome();
-        this.idade = aluno.getIdade();
-        this.email = aluno.getEmail();
-
-    }
 }

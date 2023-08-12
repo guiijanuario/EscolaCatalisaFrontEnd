@@ -1,7 +1,9 @@
 package com.zupschool.gerenciamentoescolar.service;
 
 import com.zupschool.gerenciamentoescolar.DTO.AlunoDTO;
+import com.zupschool.gerenciamentoescolar.DTO.MatriculaDTO;
 import com.zupschool.gerenciamentoescolar.Model.Aluno;
+import com.zupschool.gerenciamentoescolar.Model.Matricula;
 import com.zupschool.gerenciamentoescolar.mapping.MappingService;
 import com.zupschool.gerenciamentoescolar.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +28,14 @@ public class AlunoService {
 
     public List<AlunoDTO> listaAlunos (){
         Iterable<Aluno> alunos = alunoRepository.findAll();
-        List<AlunoDTO> alunoDTO = new ArrayList<>();
+        List<AlunoDTO> alunoDTOS = new ArrayList<>();
         for (Aluno aluno: alunos){
-            alunoDTO.add(new AlunoDTO(aluno));
+            AlunoDTO alunoDTOs = mappingService.mapAlunoToDTO(aluno);
+            alunoDTOS.add(alunoDTOs);
 
         }
 
-        return alunoDTO;
+        return alunoDTOS;
     }
     public Optional<AlunoDTO> getAlunoPorId(Long id) {
         Optional<Aluno> aluno = alunoRepository.findById(id);
@@ -40,11 +43,12 @@ public class AlunoService {
 
             return Optional.empty();
         }
-        return aluno.map(AlunoDTO::new);
+        return aluno.map(a->mappingService.mapAlunoToDTO(a));
     }
     public AlunoDTO cadastraAluno(AlunoDTO alunoDTO) {
-        Aluno aluno = alunoRepository.save(new Aluno(alunoDTO));
-        return new AlunoDTO(aluno);
+        Aluno aluno = mappingService.mapDTOToAluno(alunoDTO);
+        Aluno alunoSaved = alunoRepository.save(aluno);
+        return mappingService.mapAlunoToDTO(aluno);
     }
 
     public AlunoDTO atualizaAluno(AlunoDTO alunoDTO){

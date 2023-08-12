@@ -2,9 +2,11 @@ package com.zupschool.gerenciamentoescolar.mapping;
 
 import com.zupschool.gerenciamentoescolar.DTO.AlunoDTO;
 import com.zupschool.gerenciamentoescolar.DTO.CursoDTO;
+import com.zupschool.gerenciamentoescolar.DTO.MatriculaDTO;
 import com.zupschool.gerenciamentoescolar.DTO.ProfessorDTO;
 import com.zupschool.gerenciamentoescolar.Model.Aluno;
 import com.zupschool.gerenciamentoescolar.Model.Curso;
+import com.zupschool.gerenciamentoescolar.Model.Matricula;
 import com.zupschool.gerenciamentoescolar.Model.Professor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +37,10 @@ public class MappingService {
     public Professor mapDTOToProfessor (ProfessorDTO professorDTO){
         return modelMapper.map(professorDTO,Professor.class);
     }
-
+    public MatriculaDTO mapMatriculaToDTO(Matricula matricula){
+        return modelMapper.map(matricula,MatriculaDTO.class);
+    }
+    public Matricula mapDTOToMatricula(MatriculaDTO matriculaDTO){
+        return modelMapper.map(matriculaDTO,Matricula.class);
+    }
 }
