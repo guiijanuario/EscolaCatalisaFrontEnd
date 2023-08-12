@@ -2,9 +2,9 @@ package com.zupschool.gerenciamentoescolar.service;
 
 import com.zupschool.gerenciamentoescolar.DTO.AlunoDTO;
 import com.zupschool.gerenciamentoescolar.Model.Aluno;
+import com.zupschool.gerenciamentoescolar.mapping.MappingService;
 import com.zupschool.gerenciamentoescolar.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -17,7 +17,8 @@ public class AlunoService {
 
     @Autowired
     private final AlunoRepository alunoRepository;
-
+    @Autowired
+    private MappingService mappingService;
     public AlunoService(AlunoRepository alunoRepository) {
         this.alunoRepository = alunoRepository;
     }
@@ -46,15 +47,17 @@ public class AlunoService {
     }
 
     public AlunoDTO atualizaAluno(AlunoDTO alunoDTO){
-       Aluno alunoAtual = alunoRepository.findById(alunoDTO.getId()).get();
-        if (alunoAtual.getId()!=null){
+       AlunoDTO alunoAtual = getAlunoPorId(alunoDTO.getId()).orElse(null);
+        if (alunoAtual!=null){
             alunoAtual.setId(alunoDTO.getId());
             alunoAtual.setNome(alunoDTO.getNome());
             alunoAtual.setEmail(alunoDTO.getEmail());
             alunoAtual.setIdade(alunoDTO.getIdade());
+        Aluno aluno = mappingService.mapDTOToAluno(alunoAtual);
+        Aluno alunoSalvo = alunoRepository.save(aluno);
+        return mappingService.mapAlunoToDTO(alunoSalvo);
         }
-        Aluno alunoSalvo = alunoRepository.save(alunoAtual);
-        return new AlunoDTO(alunoSalvo);
+       return null;
     }
     public void deletaAluno(Long id) {
         alunoRepository.deleteById(id);
