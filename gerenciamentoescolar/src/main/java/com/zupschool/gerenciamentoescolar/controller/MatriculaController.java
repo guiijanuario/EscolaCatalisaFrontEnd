@@ -1,7 +1,6 @@
 package com.zupschool.gerenciamentoescolar.controller;
 
 import com.zupschool.gerenciamentoescolar.DTO.MatriculaDTO;
-import com.zupschool.gerenciamentoescolar.DTO.ProfessorDTO;
 import com.zupschool.gerenciamentoescolar.service.MatriculaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,10 +12,10 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@Controller(value = "/matricula")
+@RequestMapping(value="/matricula")
 public class MatriculaController {
     @Autowired
-    private MatriculaService matriculaService;
+    MatriculaService matriculaService;
 
     @GetMapping
     public ResponseEntity<List<MatriculaDTO>> listaMatriculas(){

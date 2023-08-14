@@ -16,7 +16,6 @@ public class CursoController {
     @Autowired
     CursoService cursoService;
 
-
     @GetMapping
     public ResponseEntity<List<CursoDTO>> listaCursos(){
         return ResponseEntity.ok(cursoService.listaCursos());

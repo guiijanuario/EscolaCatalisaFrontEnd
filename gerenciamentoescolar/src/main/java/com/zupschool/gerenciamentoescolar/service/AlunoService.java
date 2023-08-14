@@ -48,13 +48,13 @@ public class AlunoService {
     public AlunoDTO cadastraAluno(AlunoDTO alunoDTO) {
         Aluno aluno = mappingService.mapDTOToAluno(alunoDTO);
         Aluno alunoSaved = alunoRepository.save(aluno);
-        return mappingService.mapAlunoToDTO(aluno);
+        return mappingService.mapAlunoToDTO(alunoSaved);
     }
 
     public AlunoDTO atualizaAluno(AlunoDTO alunoDTO){
        AlunoDTO alunoAtual = getAlunoPorId(alunoDTO.getId()).orElse(null);
         if (alunoAtual!=null){
-            alunoAtual.setId(alunoDTO.getId());
+            alunoAtual.setId(alunoAtual.getId());
             alunoAtual.setNome(alunoDTO.getNome());
             alunoAtual.setEmail(alunoDTO.getEmail());
             alunoAtual.setIdade(alunoDTO.getIdade());

@@ -1,7 +1,5 @@
 package com.zupschool.gerenciamentoescolar.Model;
 
-import com.zupschool.gerenciamentoescolar.DTO.CursoDTO;
-import com.zupschool.gerenciamentoescolar.DTO.ProfessorDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

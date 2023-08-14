@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,7 +21,7 @@ public class Matricula {
     private Long id;
     private String dataMatricula;
     @OneToMany(mappedBy = "matricula", cascade = CascadeType.ALL)
-    private List<Aluno> aluno;
+    private List<Aluno> aluno = new ArrayList<>();
     @OneToMany(mappedBy = "matricula", cascade = CascadeType.ALL)
-    private List<Curso> curso;
+    private List<Curso> curso = new ArrayList<>();
 }
