@@ -21,11 +21,11 @@ json
     "idade": 22,
     "email": "asdfas@df.com"
 }
+
 PUT
 U update alunos
 http://localhost:8080/alunos/5
 ﻿
-
 Body
 raw (json)
 json
@@ -35,6 +35,7 @@ json
     "idade": 44,
     "email": "asdfas@df.com"
 }
+
 GET
 listatodoscursos
 http://localhost:8080/cursos
