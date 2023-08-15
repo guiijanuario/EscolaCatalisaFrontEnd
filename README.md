@@ -54,7 +54,6 @@ http://localhost:8080/cursos
 Body
 raw (json)
 json
-
 {
 
 
@@ -62,6 +61,7 @@ json
     "cargaHoraria":360,
     "professorId": 1
 }
+
 DELETE
 delete curso
 http://localhost:8080/cursos/2
@@ -80,6 +80,7 @@ json
     "nome": "compiladores de computadores",
     "cargaHoraria":400
 }
+
 GET
 listaprofessor
 http://localhost:8080/professor
@@ -93,12 +94,13 @@ http://localhost:8080/cursos/1
 Body
 raw (json)
 json
- {
+{
         "id": 1,
         "nome": "lfa",
         "cargaHoraria": 240,
         "professorId": 1
-    }
+}
+
 POST
 http://localhost:8080/professor
 http://localhost:8080/professor
