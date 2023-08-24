@@ -1,7 +1,29 @@
 
-ö
-jgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/GerenciamentoescolarApplication.java,2\e\2ef0ce0234733de0f9ac1a60d8da6ff038c75dce
-O
-gerenciamentoescolar/.gitignore,6\d\6db2619662798b9d73eafc39ffda0250e6c9ebea
+è
+_gerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/service/CursoService.java,1\b\1b53c85b20f00bd35d785a1c09ae75049652339f
+ì
+cgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/service/ProfessorService.java,b\8\b81618608d6dc5a0df03039a8ca5b7ae91bd8324
+Ü
+Vgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/Model/Curso.java,e\1\e1fe12dd76f93334648630f7e5af319c1445836f
+ä
+Zgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/Model/Professor.java,8\5\855084e5a52dc36b171bcbe5c1cceca3286f3d5d
+ä
+Zgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/Model/Matricula.java,5\6\564a77eb42495a6c93ae72e5b09359b9d4d9e24f
+ô
+igerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/controller/ProfessorController.java,b\d\bd6c181348d30a03733acafddfe08e6d6b1d53f4
+ô
+igerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/repository/MatriculaRepository.java,f\b\fb895217f751fff1c5b6da05257e1fe949ac6143
+ô
+igerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/repository/ProfessorRepository.java,c\f\cffead88db589ba4035faf33f3461a84dca594be
+ï
+egerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/repository/CursoRepository.java,3\5\35148b780c8660798cabed0293bd799378b6bf51
+ï
+egerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/repository/AlunoRepository.java,b\e\be38e3976b10b40ba2afd013af300b8e15213054
 L
 gerenciamentoescolar/pom.xml,a\5\a574d952a9505e48fb92d1d694437a763be7d167
+ë
+agerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/mapping/MappingService.java,5\a\5af9253a07b5bdc22e7ffad22b58b6190c836537
+î
+dgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/mapping/ModelMapperConfig.java,e\6\e67c15f6a6e9b74f4216b640190397db0f928100
+ö
+jgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/GerenciamentoescolarApplication.java,2\e\2ef0ce0234733de0f9ac1a60d8da6ff038c75dce
