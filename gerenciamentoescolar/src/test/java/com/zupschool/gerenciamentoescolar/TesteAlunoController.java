@@ -87,6 +87,7 @@ class TesteAlunoController {
         AlunoDTO aluno = new AlunoDTO(1L, "John Doe", 25, "john@example.com", 123L, 456L);
 
         when(alunoService.getAlunoPorId(1L)).thenReturn(Optional.of(aluno));
+
         mockMvc.perform(get("/alunos/1")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())

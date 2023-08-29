@@ -1,0 +1,12 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥ìÀ
+I
+java:S1948"'Make "curso" transient or serializable.(¥ ÙÉıÿÿÿÿ8„âô¨Ÿ1
+h
+java:S1128"KRemove this unused import 'com.zupschool.gerenciamentoescolar.Model.Aluno'.(¿ş»£8ˆâô¨Ÿ1
+h
+java:S1128"KRemove this unused import 'com.zupschool.gerenciamentoescolar.Model.Curso'.(Û²™‰8ˆâô¨Ÿ1
+^
+java:S1128"<Remove this unused import 'jakarta.persistence.CascadeType'.(ÃÃÊŠúÿÿÿÿ8ˆâô¨Ÿ1
+\
+java:S1128":Remove this unused import 'jakarta.persistence.OneToMany'.( ëîéúÿÿÿÿ8ˆâô¨Ÿ1

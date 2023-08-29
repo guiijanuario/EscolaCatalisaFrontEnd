@@ -1,0 +1,6 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥ìÀ8Ôôì¹1
+h
+java:S1128"KRemove this unused import 'com.zupschool.gerenciamentoescolar.Model.Curso'.(Û²™‰8‰´÷Â1
+q
+java:S1128"ORemove this unused import 'com.zupschool.gerenciamentoescolar.Model.Professor'.(ï‡ÁŸûÿÿÿÿ8‰´÷Â1

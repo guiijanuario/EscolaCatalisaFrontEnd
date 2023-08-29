@@ -36,6 +36,9 @@ class TesteMatriculaController {
     @MockBean
     private MatriculaService matriculaService;
 
+    TesteMatriculaController() {
+    }
+
     @Test
     void testaCriarMatricula() throws Exception {
 
@@ -116,7 +119,7 @@ class TesteMatriculaController {
     }
 
     @Test
-    void testAtualizaCurso() throws Exception {
+    void testAtualizaMatricula() throws Exception {
         List<AlunoDTO> alunos = new ArrayList<>();
         alunos.add(new AlunoDTO(1L, "Alice", 20, "alice@example.com", 123L, 456L));
 
@@ -136,13 +139,17 @@ class TesteMatriculaController {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"id\":1," +
                                 "\"dataMatricula\":\"2023-08-23\"," +
-                                "\"aluno\":[{\"id\":1,\"nome\":\"Alice\",\"idade\":20,\"email\":\"alice@example.com\",\"matriculaId\":123,\"cursoId\":456}]," +
-                                "\"curso\":[{\"id\":1,\"nome\":\"Math\",\"cargaHoraria\":60,\"professorId\":789,\"matriculaId\":987}]}"))
+                                "\"aluno\":[{\"id\":1,\"nome\":\"Alice\",\"idade\":20,\"email\":\"alice@example.com\"," +
+                                "\"matriculaId\":123,\"cursoId\":456}]," +
+                                "\"curso\":[{\"id\":1,\"nome\":\"Math\",\"cargaHoraria\":60,\"professorId\":789," +
+                                "\"matriculaId\":987}]}"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{\"id\":1," +
                         "\"dataMatricula\":\"2023-08-23\"," +
-                        "\"aluno\":[{\"id\":1,\"nome\":\"Alice\",\"idade\":20,\"email\":\"alice@example.com\",\"matriculaId\":123,\"cursoId\":456}]," +
-                        "\"curso\":[{\"id\":1,\"nome\":\"Math\",\"cargaHoraria\":60,\"professorId\":789,\"matriculaId\":987}]}"));
+                        "\"aluno\":[{\"id\":1,\"nome\":\"Alice\",\"idade\":20,\"email\":\"alice@example.com\"," +
+                        "\"matriculaId\":123,\"cursoId\":456}]," +
+                        "\"curso\":[{\"id\":1,\"nome\":\"Math\",\"cargaHoraria\":60,\"professorId\":789," +
+                        "\"matriculaId\":987}]}"));
 
         verify(matriculaService).atualizaMatricula(matriculaDTO);
     }
