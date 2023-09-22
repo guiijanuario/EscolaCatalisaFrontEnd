@@ -20,7 +20,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value = "/api/alunos", produces = {"application/json"})
 @Tag(name = "Feature - Alunos")
-@CrossOrigin(origins = "http://127.0.0.1:5500/")
+@CrossOrigin(origins = "http://127.0.0.1:5501/")
 public class AlunoController {
 
     @Autowired
@@ -37,6 +37,7 @@ public class AlunoController {
         List<AlunoDTO> alunosDTO = new ArrayList<>();
         for (AlunoModel aluno : alunosEncontrados) {
             AlunoDTO alunoDTO = new AlunoDTO(
+                    aluno.getId(),
                     aluno.getNome(),
                     aluno.getIdade(),
                     aluno.getEmail(),
@@ -73,12 +74,25 @@ public class AlunoController {
         AlunoModel novoAluno = alunoService.criarAluno(alunoModel);
         logEventosService.gerarLogCadastroRealizado(novoAluno, TipoLogEvento.ALUNO_CADASTRADO);
 
-        AlunoDTO alunoDTO = new AlunoDTO(novoAluno.getNome(),
+        AlunoDTO alunoDTO = new AlunoDTO(
+                novoAluno.getId(),
+                novoAluno.getNome(),
                  novoAluno.getIdade(),
                 novoAluno.getEmail(),
                 novoAluno.getCpf(),
                 novoAluno.getSenha());
         return new ResponseEntity<>(alunoDTO, HttpStatus.CREATED);
+    }
+
+    @PostMapping(path = "/login")
+    public ResponseEntity<String> fazLogin(@RequestBody AlunoModel alunoModel){
+        AlunoModel alunoExistente = alunoService.buscarAlunoPorEmail(alunoModel.getEmail());
+
+        if (alunoExistente != null && alunoExistente.getSenha().equals(alunoModel.getSenha())) {
+            return ResponseEntity.ok("Parabéns, você está logado com sucesso!");
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciais inválidas. Verifique seu e-mail e senha.");
+        }
     }
 
     @DeleteMapping(value = "/{id}")

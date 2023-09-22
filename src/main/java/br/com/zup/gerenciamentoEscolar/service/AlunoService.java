@@ -29,4 +29,11 @@ public class AlunoService {
     public void deletarAluno(Long id){
         alunoRepository.deleteById(id);
     }
+
+    public AlunoModel buscarAlunoPorEmail(String email) {
+        return alunoRepository.findByEmail(email);
+    }
+
+
+
 }

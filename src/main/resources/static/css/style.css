@@ -1,0 +1,67 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 50% 36.45%, #eef1d0 0, #e5efcc 8.33%, #dbecc8 16.67%, #d0e9c4 25%, #c3e5c0 33.33%, #b5e1bd 41.67%, #a5ddba 50%, #94d8b8 58.33%, #83d4b9 66.67%, #71d0bb 75%, #5ecdbe 83.33%);
+}
+
+.navbar-custom {
+    background-color: rgba(112, 168, 149, 0.5);
+}
+
+.jumbotron {
+    background-color: rgba(11, 87, 62, 0.671);
+    color: #fff; 
+    text-align: center; 
+    padding: 30px; 
+    border-radius: 12px;
+}
+
+.btn-lg {
+    padding: 20px 40px; 
+    font-size: 24px;
+}
+
+
+h2 {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+#resultadoBusca {
+    margin-top: 20px;
+}
+
+
+.error-message {
+    color: #ff0000;
+}
+
+.footer {
+    margin-top: auto; 
+}
+
