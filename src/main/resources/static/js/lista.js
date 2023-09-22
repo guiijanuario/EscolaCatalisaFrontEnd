@@ -8,8 +8,8 @@ function preencherTabelaAlunos(alunos) {
             <td>${aluno.id}</td>
             <td>${aluno.nome}</td>
             <td>${aluno.idade}</td>
-            <td>${aluno.cpf}</td>
             <td>${aluno.email}</td>
+            <td>${aluno.cpf}</td>
             <td>
                 <button class="btn btn-primary" onclick="editarAluno(${aluno.id})">Editar</button>
                 <button class="btn btn-danger" onclick="excluirAluno(${aluno.id})">Excluir</button>
