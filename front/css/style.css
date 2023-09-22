@@ -1,0 +1,22 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: grey;
+    padding: 3%;
+    color: white;
+    border-radius: 6px;
+}
+
+.pagInicial{
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+
+    .btn-group{
+        margin:5%;
+    }
+}
