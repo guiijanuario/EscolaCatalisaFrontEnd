@@ -1,0 +1,8 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§»ç˜8Ïù®¨Ÿ1
+n
+java:S1128"LRemove this unused import 'com.zupschool.gerenciamentoescolar.DTO.AlunoDTO'.(ƒ¥Êµùÿÿÿÿ8Ýù®¨Ÿ1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ýù®¨Ÿ1
+M
+java:S1128	"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Þù®¨Ÿ1

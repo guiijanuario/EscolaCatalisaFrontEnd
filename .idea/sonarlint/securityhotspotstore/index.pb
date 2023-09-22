@@ -13,16 +13,8 @@ Zgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/Model/Mat
 igerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/controller/ProfessorController.java,b\d\bd6c181348d30a03733acafddfe08e6d6b1d53f4
 L
 gerenciamentoescolar/pom.xml,a\5\a574d952a9505e48fb92d1d694437a763be7d167
-ë
-agerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/mapping/MappingService.java,5\a\5af9253a07b5bdc22e7ffad22b58b6190c836537
-î
-dgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/mapping/ModelMapperConfig.java,e\6\e67c15f6a6e9b74f4216b640190397db0f928100
 ö
 jgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/GerenciamentoescolarApplication.java,2\e\2ef0ce0234733de0f9ac1a60d8da6ff038c75dce
-è
-_gerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/service/AlunoService.java,9\a\9a4bf486c380d805107a372cc5e490e4443d220f
-ï
-egerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/controller/AlunoController.java,0\0\00865f087500a91ece9776e28d95028326157bfd
 ï
 egerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/controller/CursoController.java,e\0\e0709ef40366d318ea3ef587a8122d28f1bae77b
 ô
@@ -33,8 +25,6 @@ cgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/service/M
 [gerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/DTO/MatriculaDTO.java,3\b\3b5f385a46114454db915b38bf55e3a77c5e6f3c
 á
 Wgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/DTO/CursoDTO.java,b\b\bb1ded1207ed0657650f7c6368a77433510e5193
-á
-Wgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/DTO/AlunoDTO.java,d\5\d535a51027e0cb6e464c1b484116cdf982263ac1
 ã
 [gerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/DTO/ProfessorDTO.java,7\b\7b8725373697ef973abafd173d77d279f3296fe0
 è
@@ -45,3 +35,27 @@ ogerenciamentoescolar/src/test/java/com/zupschool/gerenciamentoescolar/Gerenciam
 cgerenciamentoescolar/src/test/java/com/zupschool/gerenciamentoescolar/TesteProfessorController.java,c\e\cef41a773e41430cd03c1537a8dac4ffda213589
 ì
 cgerenciamentoescolar/src/test/java/com/zupschool/gerenciamentoescolar/TesteMatriculaController.java,e\9\e9da4a4ee865bf828b38604fb1e6ccd56a2f326a
+è
+_gerenciamentoescolar/src/test/java/com/zupschool/gerenciamentoescolar/TesteAlunoController.java,c\1\c1dc86ccc672d08e5ef421444f27d4a57f635bcb
+ï
+egerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/repository/AlunoRepository.java,b\e\be38e3976b10b40ba2afd013af300b8e15213054
+ô
+igerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/repository/ProfessorRepository.java,c\f\cffead88db589ba4035faf33f3461a84dca594be
+ô
+igerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/repository/MatriculaRepository.java,f\b\fb895217f751fff1c5b6da05257e1fe949ac6143
+ï
+egerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/repository/CursoRepository.java,3\5\35148b780c8660798cabed0293bd799378b6bf51
+O
+gerenciamentoescolar/.gitignore,6\d\6db2619662798b9d73eafc39ffda0250e6c9ebea
+Ü
+Vgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/Model/Aluno.java,0\c\0c50f1da555d7210b450d60b7d3094184ae88044
+è
+_gerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/service/AlunoService.java,9\a\9a4bf486c380d805107a372cc5e490e4443d220f
+ë
+agerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/mapping/MappingService.java,5\a\5af9253a07b5bdc22e7ffad22b58b6190c836537
+î
+dgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/mapping/ModelMapperConfig.java,e\6\e67c15f6a6e9b74f4216b640190397db0f928100
+á
+Wgerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/DTO/AlunoDTO.java,d\5\d535a51027e0cb6e464c1b484116cdf982263ac1
+ï
+egerenciamentoescolar/src/main/java/com/zupschool/gerenciamentoescolar/controller/AlunoController.java,0\0\00865f087500a91ece9776e28d95028326157bfd

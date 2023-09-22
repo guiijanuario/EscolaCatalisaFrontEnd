@@ -28,6 +28,7 @@ public class ProfessorController {
         return ResponseEntity.ok(professorService.getProfessorPorId(id));
     }
     @PostMapping
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public ResponseEntity<ProfessorDTO> cadastraProfessor(@RequestBody ProfessorDTO professorDTO){
         ProfessorDTO professorNovo = professorService.cadastraProfessor(professorDTO);
         return new ResponseEntity<>(professorNovo, HttpStatus.CREATED);

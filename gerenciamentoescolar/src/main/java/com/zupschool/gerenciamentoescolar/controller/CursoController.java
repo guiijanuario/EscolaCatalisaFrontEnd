@@ -26,6 +26,7 @@ public class CursoController {
         return ResponseEntity.ok(cursoService.getCursoPorId(id));
     }
     @PostMapping
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public ResponseEntity<CursoDTO> cadastraCurso(@RequestBody CursoDTO cursoDTO){
         CursoDTO cursoNovo = cursoService.cadastraCurso(cursoDTO);
         return new ResponseEntity<>(cursoNovo, HttpStatus.CREATED);

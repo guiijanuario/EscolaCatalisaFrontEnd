@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+    <div>
+        <h1 class="text-center"> Cadastro de Alunos </h1>
+    
+        <form id="formulario">
+            <div class="mb-3">
+                <label class="form-label" for="nomeAluno">Nome do Aluno:</label>
+                <input class="form-control" type="text" placeholder="coloque o nome do aluno" name="nomeAluno"
+                    id="nomeAluno" required>
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label" for="idade">Idade:</label>
+                <input class="form-control" type="text" placeholder="digite a idade" name="idade" id="idade" required>
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label" for="email">email:</label>
+                <input class="form-control" type="text" placeholder="digite o email" name="email" id="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="email">matricula ID:</label>
+                <input class="form-control" type="text" placeholder="digite o id de matricula" name="matriculaId" id="matriculaId" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="cursoId">Curso ID:</label>
+                <input class="form-control" type="text" placeholder="digite o id do curso" name="cursoId" id="cursoId" required>
+            </div>
+    
+            <button type="submit" onclick="mensagem()"
+                class="btn btn-primary btn-lg m-3 d-grid gap-2 col-4 mx-auto">Enviar</button>
+        </form>
+    </div>
+    <script src="../alunos/cadastrodealunos.js"></script>
+</body>
+</html>

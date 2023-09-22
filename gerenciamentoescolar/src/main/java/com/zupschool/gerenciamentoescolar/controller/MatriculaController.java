@@ -27,6 +27,7 @@ public class MatriculaController {
         return ResponseEntity.ok(matriculaService.getMatriculaPorId(id));
     }
     @PostMapping
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public ResponseEntity<MatriculaDTO> cadastraMatricula(@RequestBody MatriculaDTO matriculaDTO){
         MatriculaDTO matriculaNova = matriculaService.cadastraMatricula(matriculaDTO);
         return new ResponseEntity<>(matriculaNova, HttpStatus.CREATED);
