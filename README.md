@@ -1,12 +1,16 @@
-# API Gerenciamento Escolar
-
+# Gerenciamento Escolar Back e FrontEnd
 ---
 
 ### 🔷 Resumo
 
 <p> 
-Objetivo: Criar um aplicativo Java usando o Spring Framework que permite gerenciar alunos, cursos, professores e matrículas em uma escola.
+Objetivo: Criar um aplicativo Java usando o Spring Framework que permite gerenciar alunos, cursos, professores e matrículas em uma escola e usar bootstrap para fazer o frontend.
 </p>
+
+<p> BackEnd foi usado um projeto mais antigo, tem algumas coisas para melhorar no código, o foco desse repositório é treinar e aprender frontend e bootstrap.</p>
+
+[Projeto BackEnd Antigo](https://github.com/guiijanuario/API-GerenciamentoEscolar)
+
 
 <p>Você deverá criar uma API que contém as seguintes funcionalidades</p>
 
