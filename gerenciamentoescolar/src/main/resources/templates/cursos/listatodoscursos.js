@@ -1,33 +1,32 @@
-const listaralunos = document.getElementById("listaralunos");
+const listarcursos = document.getElementById("listarcursos");
 
-if (listaralunos) {
-    listaralunos.addEventListener("click", () => {
-        buscaTodosAlunos();
+if (listarcursos) {
+    listarcursos.addEventListener("click", () => {
+        buscaTodosCursos();
     });
 }
-function buscaTodosAlunos() {
-    const url = "http://localhost:8080/alunos"
+function buscaTodosCursos() {
+    const url = "http://localhost:8080/cursos"
 
     fetch(url)
         .then((data) => {
             return data.json();
         })
-        .then((todosAlunos) => {
+        .then((todosCursos) => {
             let data1 = "";
-            todosAlunos.forEach((values) => {
+            todosCursos.forEach((values) => {
                 data1 += `
             <tr>
             
               <th scope="row">${values.id}</th>
               <td>${values.nome}</td>
-              <td>${values.idade}</td>
-              <td>${values.email}</td>
+              <td>${values.cargaHoraria}</td>
+              <td>${values.professorId}</td>
               <td>${values.matriculaId}</td>
-              <td>${values.cursoId}</td>
             </tr>
           `;
             });
-            document.getElementById("table-alunos").innerHTML = data1;
+            document.getElementById("table-cursos").innerHTML = data1;
             console.log(data1);
         })
         .catch((error) => {

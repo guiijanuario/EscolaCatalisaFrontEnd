@@ -17,10 +17,13 @@ public class CursoController {
     CursoService cursoService;
 
     @GetMapping
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public ResponseEntity<List<CursoDTO>> listaCursos(){
         return ResponseEntity.ok(cursoService.listaCursos());
     }
+
     @GetMapping(path = "/{id}")
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public ResponseEntity<Optional<CursoDTO>> getCursoPorId(@PathVariable Long id){
 
         return ResponseEntity.ok(cursoService.getCursoPorId(id));
@@ -33,11 +36,13 @@ public class CursoController {
     }
 
     @PutMapping(path="/{id}")
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public CursoDTO atulizaCurso(@PathVariable Long id, @RequestBody CursoDTO cursoDTO){
         return cursoService.atualizaCurso(cursoDTO);
     }
 
     @DeleteMapping(path="/{id}")
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public void deleteCurso (@PathVariable Long id){
         cursoService.deletaCurso(id);
     }

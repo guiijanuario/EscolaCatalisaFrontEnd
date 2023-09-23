@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/gerenciamentoescolar/src/main/resources/templates/index.html"
+    "livePreview.defaultPreviewPath": "/gerenciamentoescolar/src/main/resources/templates/index.html",
+    "java.compile.nullAnalysis.mode": "automatic"
 }

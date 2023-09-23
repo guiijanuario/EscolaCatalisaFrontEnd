@@ -19,10 +19,12 @@ public class ProfessorController {
     private ProfessorService professorService;
 
     @GetMapping
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public ResponseEntity<List<ProfessorDTO>> listaProfessores(){
         return ResponseEntity.ok(professorService.listaProfessores());
     }
     @GetMapping(path = "/{id}")
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public ResponseEntity<Optional<ProfessorDTO>> getProfessorPorId(@PathVariable Long id){
 
         return ResponseEntity.ok(professorService.getProfessorPorId(id));
@@ -35,11 +37,13 @@ public class ProfessorController {
     }
 
     @PutMapping(path="/{id}")
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public ProfessorDTO atulizaProfessor(@PathVariable Long id, @RequestBody ProfessorDTO professorDTO){
         return professorService.atualizaProfessor(professorDTO);
     }
 
     @DeleteMapping(path="/{id}")
+    @CrossOrigin(origins = "http://127.0.0.1:3000/")
     public void deleteCurso (@PathVariable Long id){
         professorService.deletaProfessor(id);
     }

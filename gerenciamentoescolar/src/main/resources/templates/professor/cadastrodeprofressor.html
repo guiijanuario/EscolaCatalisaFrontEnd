@@ -10,13 +10,13 @@
 </head>
 <body>
     <div>
-        <h1 class="text-center"> Cadastro de Alunos </h1>
+        <h1 class="text-center"> Cadastro de Professores </h1>
     
         <form id="formulario">
             <div class="mb-3">
-                <label class="form-label" for="nomeAluno">Nome do Aluno:</label>
-                <input class="form-control" type="text" placeholder="coloque o nome do aluno" name="nomeAluno"
-                    id="nomeAluno" required>
+                <label class="form-label" for="nomeProfessor">Nome do Professor:</label>
+                <input class="form-control" type="text" placeholder="coloque o nome do professor" name="nomeProfessor"
+                    id="nomeProfessor" required>
             </div>
     
             <div class="mb-3">
@@ -25,24 +25,19 @@
             </div>
     
             <div class="mb-3">
-                <label class="form-label" for="email">email:</label>
-                <input class="form-control" type="text" placeholder="digite o email" name="email" id="email" required>
+                <label class="form-label" for="curso">curso Id:</label>
+                <input class="form-control" type="text" placeholder="digite o curso" name="curso" id="curso" required>
             </div>
 
             <div class="mb-3">
-                <label class="form-label" for="email">matricula ID:</label>
-                <input class="form-control" type="text" placeholder="digite o id de matricula" name="matriculaId" id="matriculaId" required>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label" for="cursoId">Curso ID:</label>
-                <input class="form-control" type="text" placeholder="digite o id do curso" name="cursoId" id="cursoId" required>
+                <label class="form-label" for="salario">Salario:</label>
+                <input class="form-control" type="text" placeholder="digite o salario" name="salario" id="salario" required>
             </div>
     
             <button type="submit" onclick="mensagem()"
                 class="btn btn-primary btn-lg m-3 d-grid gap-2 col-4 mx-auto">Enviar</button>
         </form>
     </div>
-    <script src="../alunos/cadastrodealunos.js"></script>
+    <script src="../professor/cadastrodeprofressor.js"></script>
 </body>
 </html>
